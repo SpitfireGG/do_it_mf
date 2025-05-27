@@ -25,13 +25,8 @@
         src = ./.;
         vendorHash = "sha256-wyg35Xnw2TJirFCHX6DQY9OaeOBJf+xKnYvXk3AKzDU=";
         buildInputs = [
-            
-
-
         ];
       };
-
-      default = dstreak;
     });
 
     devShells = forAllSystems (system: let
@@ -41,10 +36,7 @@
         packages = [
           pkgs.go
           pkgs.gotools # all required tools like linting and formatting are inside the gotools by  default
-        pkgs.make
-
-
-
+          pkgs.gnumake
         ];
       };
     });
